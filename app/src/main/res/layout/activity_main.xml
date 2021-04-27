@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        style="@style/image_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cv" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/titletext_Style"
+        android:layout_width="415dp"
+        android:layout_height="60dp"
+        android:background="#06B3A3"
+        android:text="Personal Information"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="391dp"
+        android:layout_height="570dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:ignore="MissingConstraints">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/edtFullName"
+                style="@style/infotxt_style"
+                android:hint="Full Name" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/edtEmail"
+                style="@style/infotxt_style"
+                android:layout_marginTop="20dp"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="253dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editDateOB"
+                style="@style/info2_style"
+                android:hint="DateOfBirth"
+                android:inputType="date|datetime" />
+
+            <TextView
+                android:id="@+id/textGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="285dp"
+                android:text="Gender"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:translationX="-190dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Spinner
+                android:id="@+id/Genderspin"
+                android:layout_width="115dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:translationX="-480dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <EditText
+                android:id="@+id/edtPhone"
+                style="@style/info2_style"
+                android:layout_marginRight="175dp"
+                android:hint="PhoneNumber"
+                android:inputType="phone"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/edtNationality"
+                style="@style/info2_style"
+                android:hint="Nationality"
+                android:translationX="-180dp" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/edtAddress"
+                style="@style/infotxt_style"
+                android:layout_marginTop="20dp"
+                android:hint="Address" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/edtHobbies"
+                    style="@style/infotxt_style"
+                    android:hint="Hobbies" />
+            </ScrollView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/nextbtn"
+                style="@style/btn_style"
+                android:onClick="nextPage_OnClick"
+                android:text="Next Page"
+                android:translationX="-85dp" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
